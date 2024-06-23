@@ -21,6 +21,7 @@ set(linker_script_SRC ${linker_script_SRC}
 # Sources
 set(sources_SRCS ${sources_SRCS}
     
+	${CMAKE_CURRENT_SOURCE_DIR}/src/driver/gpio.c
 	${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
 	${CMAKE_CURRENT_SOURCE_DIR}/src/syscall.c
 	${CMAKE_CURRENT_SOURCE_DIR}/src/sysmem.c
