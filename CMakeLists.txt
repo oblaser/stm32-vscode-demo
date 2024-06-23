@@ -107,7 +107,11 @@ target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
     -Wall
     -Wextra
     -Wpedantic
-    -Wno-unused-parameter
+    #-Wno-unused-parameter
+    -Werror=return-type
+    -Werror=discarded-qualifiers
+    -Werror=int-conversion
+    -Werror=implicit-function-declaration
     $<$<COMPILE_LANGUAGE:C>: >
     $<$<COMPILE_LANGUAGE:CXX>:
 
