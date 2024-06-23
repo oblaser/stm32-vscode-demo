@@ -10,7 +10,16 @@
              */
             "name": "STM32",
             "configurationProvider": "ms-vscode.cmake-tools",
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "${default}",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/cmsis/core",
+                "${workspaceFolder}/cmsis/device"
+            ],
+            "defines": [
+                "STM32F030x6"
+            ],
+            "compilerPath": "arm-none-eabi-gcc.exe"
         }
     ]
 }

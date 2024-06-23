@@ -24,12 +24,15 @@ set(sources_SRCS ${sources_SRCS}
 	${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
 	${CMAKE_CURRENT_SOURCE_DIR}/src/syscall.c
 	${CMAKE_CURRENT_SOURCE_DIR}/src/sysmem.c
+	${CMAKE_CURRENT_SOURCE_DIR}/cmsis/device/system_stm32f0xx.c
 	${CMAKE_CURRENT_SOURCE_DIR}/Startup/startup_stm32f030k6tx.s
 )
 
 # Include directories
 set(include_c_DIRS ${include_c_DIRS}
     
+	${CMAKE_CURRENT_SOURCE_DIR}/cmsis/core
+	${CMAKE_CURRENT_SOURCE_DIR}/cmsis/device
 	${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 set(include_cxx_DIRS ${include_cxx_DIRS}
@@ -41,10 +44,10 @@ set(include_asm_DIRS ${include_asm_DIRS}
 
 # Symbols definition
 set(symbols_c_SYMB ${symbols_c_SYMB}
-
+    STM32F030x6
 )
 set(symbols_cxx_SYMB ${symbols_cxx_SYMB}
-    
+    STM32F030x6
 )
 set(symbols_asm_SYMB ${symbols_asm_SYMB}
     
